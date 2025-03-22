@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverAppBar(
+      floating: true,
+      snap: true,
+      title: const Text('Photos'),
+      actions: [
+        IconButton(
+          icon: const Icon(Icons.search),
+          onPressed: () {},
+        ),
+        IconButton(
+          icon: const Icon(Icons.account_circle),
+          onPressed: () {},
+        ),
+      ],
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(48),
+        child: Container(
+          height: 48,
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              Chip(
+                label: const Text('Photos'),
+                onDeleted: null,
+              ),
+              const SizedBox(width: 8),
+              Chip(
+                label: const Text('Albums'),
+                onDeleted: null,
+              ),
+              const SizedBox(width: 8),
+              Chip(
+                label: const Text('Sharing'),
+                onDeleted: null,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
