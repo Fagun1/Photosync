@@ -166,14 +166,14 @@ class _SearchScreenState extends State<SearchScreen> {
           else if (_searchController.text.isEmpty)
             SliverPadding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              sliver: SliverToBoxAdapter(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+            sliver: SliverToBoxAdapter(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
                     const Text(
-                      'Recent Searches',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
+                    'Recent Searches',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
                     const SizedBox(height: 16),
                     if (_recentSearches.isEmpty)
                       const Center(child: Text('No recent searches'))
@@ -320,8 +320,8 @@ class _SearchScreenState extends State<SearchScreen> {
                   },
                   childCount: _searchResults.length,
                 ),
-              ),
             ),
+          ),
         ],
       ),
     );
